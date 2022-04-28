@@ -2,12 +2,14 @@
     <string name="app_name">Trecco</string>
     <string name="image_contentDescription">image</string>
     <string name="let_s_get_started_text">Vamos Começar</string>
-    <string name="intro_text_description">Colabore e Trabalhem Juntos Através de Múltiplos Dispositívos na Interface Minimalísta do Trecco.</string>
+    <string name="intro_text_description">Colabore e Trabalhem Juntos Através de Múltiplos Dispositívos na Interface Minimalísta do Trecco</string>
     <string name="sign_in">Entrar</string>
     <string name="sign_up">Cadastrar</string>
-    <string name="sign_up_description_text">Insira seu nome, e-mail e senha para registra-se conosco.</string>
+    <string name="sign_up_description_text">Insira seu nome, e-mail e senha para registra-se conosco</string>
     <string name="name">Nome</string>
     <string name="password">Senha</string>
     <string name="email">E-mail</string>
-    <string name="sign_in_description_text">Insira seu e-mail e senha para entrar.</string>
+    <string name="sign_in_description_text">Insira seu e-mail e senha para entrar</string>
+    <string name="please_click_back_again_to_exit">Clique novamente para sair</string>
+    <string name="please_wait">Aguarde&#8230;</string>
 </resources>

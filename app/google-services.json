@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "622783444786",
+    "project_id": "trecco-778eb",
+    "storage_bucket": "trecco-778eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622783444786:android:43f53be616c86c4155c92b",
+        "android_client_info": {
+          "package_name": "com.example.trecco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622783444786-sta0uhcdbu110qsl61l4qsv9dj2dua95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEc0JP_mGtlg3yMl-TiDl7uBi6Y_s_EgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622783444786-sta0uhcdbu110qsl61l4qsv9dj2dua95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
