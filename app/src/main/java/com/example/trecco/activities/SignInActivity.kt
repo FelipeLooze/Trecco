@@ -7,6 +7,8 @@ import android.text.TextUtils
 import android.view.WindowManager
 import android.widget.Toast
 import com.example.trecco.R
+import com.example.trecco.firebase.FirestoreClass
+import com.example.trecco.models.User
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
@@ -44,6 +46,12 @@ class SignInActivity : BaseActivity() {
         toolbar_sign_in_activity.setNavigationOnClickListener{ onBackPressed() }
     }
 
+    fun signInSuccess(user: User) {
+        hideProgressDialog()
+        startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+        finish()
+    }
+
     private fun signInRegisteredUser() {
         val email: String = et_email.text.toString().trim { it <= ' ' }
         val password: String = et_password.text.toString().trim { it <= ' ' }
@@ -54,13 +62,7 @@ class SignInActivity : BaseActivity() {
                 .addOnCompleteListener { task ->
                     hideProgressDialog()
                     if (task.isSuccessful) {
-                        Toast.makeText(
-                            this@SignInActivity,
-                            "Sucesso ao entrar",
-                            Toast.LENGTH_LONG
-                        ).show()
-
-                        startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+                        FirestoreClass().signInUser(this@SignInActivity)
                     } else {
                         Toast.makeText(
                             this@SignInActivity,

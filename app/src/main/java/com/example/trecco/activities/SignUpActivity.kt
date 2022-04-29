@@ -6,6 +6,8 @@ import android.text.TextUtils
 import android.view.WindowManager
 import android.widget.Toast
 import com.example.trecco.R
+import com.example.trecco.firebase.FirestoreClass
+import com.example.trecco.models.User
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -27,6 +29,19 @@ class SignUpActivity : BaseActivity() {
         btn_sign_up.setOnClickListener{
             registerUser()
         }
+    }
+
+    fun userRegisteredSuccess() {
+
+        Toast.makeText(
+            this@SignUpActivity,
+            "Cadastro realizado com sucesso",
+            Toast.LENGTH_SHORT
+        ).show()
+
+        hideProgressDialog()
+        FirebaseAuth.getInstance().signOut()
+        finish()
     }
 
     private fun setupActionBar(){
@@ -52,23 +67,19 @@ class SignUpActivity : BaseActivity() {
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(
                     OnCompleteListener<AuthResult> { task ->
-                        hideProgressDialog()
                         if (task.isSuccessful) {
                             val firebaseUser: FirebaseUser = task.result!!.user!!
                             val registeredEmail = firebaseUser.email!!
 
-                            Toast.makeText(
-                                this@SignUpActivity,
-                                "$name voce se registrou com sucesso com o e-mail $registeredEmail",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            val user = User(
+                                firebaseUser.uid, name, registeredEmail
+                            )
 
-                            FirebaseAuth.getInstance().signOut()
-                            finish()
+                            FirestoreClass().registerUser(this@SignUpActivity, user)
                         } else {
                             Toast.makeText(
                                 this@SignUpActivity,
-                                "Falha ao registrar: " + task.exception!!.message,
+                                "Fala ao cadastrar: " + task.exception!!.message,
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
