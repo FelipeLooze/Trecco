@@ -22,4 +22,22 @@ entre os usuários através da implementação de um chat em tempo real.
 
 # Telas
 
-
+  <div align="center">
+   <img src="https://github.com/FelipeLooze/Trecco/blob/master/Cadastro.jpeg?raw=true">
+  </div>
+  
+  <div align="center">
+   <img src="https://user-images.githubusercontent.com/69463877/138555277-f3ddf800-6f9a-4304-8eb7-be5b035f6ecf.png">
+  </div>
+  
+  <div align="center">
+   <img src="https://user-images.githubusercontent.com/69463877/138555277-f3ddf800-6f9a-4304-8eb7-be5b035f6ecf.png">
+  </div>
+  
+  <div align="center">
+   <img src="https://user-images.githubusercontent.com/69463877/138555277-f3ddf800-6f9a-4304-8eb7-be5b035f6ecf.png">
+  </div>
+  
+  <div align="center">
+   <img src="https://user-images.githubusercontent.com/69463877/138555277-f3ddf800-6f9a-4304-8eb7-be5b035f6ecf.png">
+  </div>
