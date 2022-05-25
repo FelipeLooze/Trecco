@@ -14,9 +14,12 @@ entre os usuários através da implementação de um chat em tempo real.
 |Luiz Felipe Looze             |190906  |CP110TIN2     |PA038TIN3|
 |Daniele dos Santos Rosa       |111706  |CP110TIN2     |PA038TIN1|
 
+# Funcionalidades
+- Sistema login automatico;
+- Sistema de update de perfil do usuario;
+- Sistema de boards e de cards tal como no Trello/jira;
+- Chat em tempo real tal como no Whatsapp/Telegram;
 
-# Resumo do que foi feito
+# Telas
 
-## Tela de login
 
-Cadastro e Login funcionando.
