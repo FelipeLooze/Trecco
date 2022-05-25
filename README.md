@@ -47,4 +47,19 @@ entre os usuários através da implementação de um chat em tempo real.
    <img src="Nav_bar.jpeg">
   </div>
 
+# Antes de Rodar
+Tenha certeza que o Android Studio esteja instalado. 
+Se não estiver pode ser baixado aqui: https://developer.android.com/studio
+
+# Running
+
+## Android Studio
+- Habilitar perfil de desenvolvedor no Smartphone;
+- Conectar o Smartphone no computador via USB;
+- No Android Studio, na parte de seleção de dispositivo, selecionar o Smartphone conectado;
+
+## Repositório
+- Na opção de código, selecione download ZIP;
+- Extraia o arquivo;
+- No Android Studio, abara a pasta do arquivo.
 
