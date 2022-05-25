@@ -57,6 +57,7 @@ Se não estiver pode ser baixado aqui: https://developer.android.com/studio
 - Habilitar perfil de desenvolvedor no Smartphone;
 - Conectar o Smartphone no computador via USB;
 - No Android Studio, na parte de seleção de dispositivo, selecionar o Smartphone conectado;
+- Selecionar opção de Run & Build.
 
 ## Repositório
 - Na opção de código, selecione download ZIP;
