@@ -22,23 +22,29 @@ entre os usuários através da implementação de um chat em tempo real.
 
 # Telas
 
+## Tela Inicial
+  <div align="center">
+   <img src="Tela_inicial.jpeg">
+  </div>
+  
 ## Tela de cadastro
   <div align="center">
    <img src="https://github.com/FelipeLooze/Trecco/blob/master/Cadastro.jpeg?raw=true">
   </div>
+
+## Tela de Login
+  <div align="center">
+   <img src="Tela_login.jpeg">
+  </div>
   
+## Tela Meu Perfil
   <div align="center">
    <img src="Meu_perfil.jpeg">
   </div>
   
+## Tela Barra de Navegação
   <div align="center">
-   <img src="https://user-images.githubusercontent.com/69463877/138555277-f3ddf800-6f9a-4304-8eb7-be5b035f6ecf.png">
+   <img src="Nav_bar.jpeg">
   </div>
-  
-  <div align="center">
-   <img src="https://user-images.githubusercontent.com/69463877/138555277-f3ddf800-6f9a-4304-8eb7-be5b035f6ecf.png">
-  </div>
-  
-  <div align="center">
-   <img src="https://user-images.githubusercontent.com/69463877/138555277-f3ddf800-6f9a-4304-8eb7-be5b035f6ecf.png">
-  </div>
+
+
