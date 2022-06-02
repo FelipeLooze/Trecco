@@ -7,15 +7,19 @@
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/drawable/shape_button_rounded.xml" value="0.332" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/drawable/white_border_shape_button_rouded.xml" value="0.332" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_base.xml" value="0.36666666666666664" />
+        <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_create_board.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_intro.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_my_profile.xml" value="0.23125" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_sign_in.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_sign_up.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_splash.xml" value="0.27291666666666664" />
+        <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_task_list.xml" value="0.23125" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/app_bar_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/dialog_progress.xml" value="0.18802083333333333" />
+        <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/item_board.xml" value="0.36666666666666664" />
+        <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/item_task.xml" value="0.23125" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/main_content.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/nav_header_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />

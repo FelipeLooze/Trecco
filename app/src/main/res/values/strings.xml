@@ -17,4 +17,13 @@
     <string name="mobile">Celular</string>
     <string name="update">ATUALIZAR</string>
     <string name="my_profile">Meu Perfil</string>
+    <string name="create_board_title">Criar Quadro</string>
+    <string name="create">CRIAR</string>
+    <string name="board_name">Nome do Quadro</string>
+    <string name="no_boards_are_available">Nenhum quadro disponível</string>
+    <string name="action_add_list">Add Lista</string>
+    <string name="hint_list_name">Nome da Lista</string>
+    <string name="action_add_card">Add Cartão</string>
+    <string name="hint_card_name">Nome do Cartão</string>
+    <string name="add_list">Add Lista</string>
 </resources>
