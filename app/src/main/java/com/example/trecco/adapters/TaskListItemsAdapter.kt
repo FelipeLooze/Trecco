@@ -1,5 +1,6 @@
 package com.example.trecco.adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.Resources
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trecco.R
 import com.example.trecco.activities.TaskListActivity
@@ -31,7 +33,7 @@ open class TaskListItemsAdapter(
         return MyViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, @SuppressLint("RecyclerView") position: Int) {
         val model = list[position]
 
         if (holder is MyViewHolder) {
@@ -95,6 +97,46 @@ open class TaskListItemsAdapter(
             holder.itemView.ib_delete_list.setOnClickListener {
                 alertDialogForDeleteList(position, model.title)
             }
+
+            holder.itemView.tv_add_card.setOnClickListener {
+
+                holder.itemView.tv_add_card.visibility = View.GONE
+                holder.itemView.cv_add_card.visibility = View.VISIBLE
+
+                holder.itemView.ib_close_card_name.setOnClickListener {
+                    holder.itemView.tv_add_card.visibility = View.VISIBLE
+                    holder.itemView.cv_add_card.visibility = View.GONE
+                }
+
+                holder.itemView.ib_done_card_name.setOnClickListener {
+
+                    val cardName = holder.itemView.et_card_name.text.toString()
+
+                    if (cardName.isNotEmpty()) {
+                        if (context is TaskListActivity) {
+                            context.addCardToTaskList(position, cardName)
+                        }
+                    }else{
+                        Toast.makeText(context, "Insira uma descrição para o cartão", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+
+            holder.itemView.rv_card_list.layoutManager = LinearLayoutManager(context)
+            holder.itemView.rv_card_list.setHasFixedSize(true)
+
+            val adapter = CardListItemsAdapter(context, model.cards)
+            holder.itemView.rv_card_list.adapter = adapter
+
+            adapter.setOnClickListener(object :
+                CardListItemsAdapter.OnClickListener {
+                override fun onClick(cardPosition: Int) {
+
+                    if (context is TaskListActivity) {
+                        context.cardDetails(position, cardPosition)
+                    }
+                }
+            })
         }
     }
 

@@ -35,6 +35,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".activities.MembersActivity"
+            android:label="@string/members"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".activities.SignUpActivity"
             android:exported="true"
             android:screenOrientation="portrait"
@@ -42,6 +47,10 @@
         <activity
             android:name=".activities.IntroActivity"
             android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.CardDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

@@ -162,7 +162,7 @@ class FirestoreClass {
             }
     }
 
-    fun addUpdateTaskList(activity: TaskListActivity, board: Board) {
+    fun addUpdateTaskList(activity: Activity, board: Board) {
         val taskListHashMap = HashMap<String, Any>()
         taskListHashMap[Constants.TASK_LIST] = board.taskList
 
@@ -171,7 +171,95 @@ class FirestoreClass {
             .update(taskListHashMap)
             .addOnSuccessListener {
                 Log.e(activity.javaClass.simpleName, "Lista de Tarefas atualizada com sucesso")
-                activity.addUpdateTaskListSuccess()
+                if (activity is TaskListActivity) {
+                    activity.addUpdateTaskListSuccess()
+                } else if (activity is CardDetailsActivity) {
+                    activity.addUpdateTaskListSuccess()
+                }
+            }
+            .addOnFailureListener { e ->
+                if (activity is TaskListActivity) {
+                    activity.hideProgressDialog()
+                } else if (activity is TaskListActivity) {
+                    activity.hideProgressDialog()
+                }
+                Log.e(activity.javaClass.simpleName, "Erro ao criar quadro", e)
+            }
+    }
+
+    fun getAssignedMembersListDetails(activity: Activity, assignedTo: ArrayList<String>) {
+        mFireStore.collection(Constants.USERS)
+            .whereIn(
+                Constants.ID,
+                assignedTo
+            )
+            .get()
+            .addOnSuccessListener{ document ->
+                Log.e(activity.javaClass.simpleName, document.documents.toString())
+                val usersList: ArrayList<User> = ArrayList()
+
+                for (i in document.documents) {
+                    val user = i.toObject(User::class.java)!!
+                    usersList.add(user)
+                }
+
+                if(activity is MembersActivity) {
+                    activity.setupMembersList(usersList)
+                }else if(activity is TaskListActivity) {
+                    activity.boardMembersDetailList(usersList)
+                }
+            }
+            .addOnFailureListener { e ->
+                if(activity is MembersActivity) {
+                    activity.hideProgressDialog()
+                }else if(activity is TaskListActivity){
+                    activity.hideProgressDialog()
+                }
+
+                Log.e(
+                    activity.javaClass.simpleName,
+                    "Erro ao criar o quadro.",
+                    e
+                )
+            }
+    }
+
+    fun getMemberDetails(activity: MembersActivity, email: String) {
+        mFireStore.collection(Constants.USERS)
+            .whereEqualTo(Constants.EMAIL, email)
+            .get()
+            .addOnSuccessListener {document ->
+                Log.e(activity.javaClass.simpleName, document.documents.toString())
+
+                if (document.documents.size > 0) {
+                    val user = document.documents[0].toObject(User::class.java)!!
+                    activity.memberDetails(user)
+                } else {
+                    activity.hideProgressDialog()
+                    activity.showErrorSnackBar("Membro não encontrado")
+                }
+
+            }
+            .addOnFailureListener { e ->
+                activity.hideProgressDialog()
+                Log.e(
+                    activity.javaClass.simpleName,
+                    "Erro ao receber detalhes do usuário",
+                    e
+                )
+            }
+    }
+
+    fun assignMemberToBoard(activity: MembersActivity, board: Board, user: User) {
+        val assignedToHashMap = HashMap<String, Any>()
+        assignedToHashMap[Constants.ASSIGNED_TO] = board.assignedTo
+
+        mFireStore.collection(Constants.BOARDS)
+            .document(board.documentId)
+            .update(assignedToHashMap)
+            .addOnSuccessListener {
+                Log.e(activity.javaClass.simpleName, "Lista de Tarefas atualizada com sucesso")
+                activity.memberAssignSuccess(user)
             }
             .addOnFailureListener { e ->
                 activity.hideProgressDialog()

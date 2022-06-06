@@ -26,4 +26,21 @@
     <string name="action_add_card">Add Cartão</string>
     <string name="hint_card_name">Nome do Cartão</string>
     <string name="add_list">Add Lista</string>
+    <string name="members">Membros</string>
+    <string name="add_member">Adicionar Membro</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="add">ADICIONAR</string>
+    <string name="search_member">Procurar Membro</string>
+    <string name="label_color">Cor da Etiqueta</string>
+    <string name="select_color">Selecionar Cor</string>
+    <string name="select_members">Selecionar Membros</string>
+    <string name="due_date">Prazo</string>
+    <string name="select_due_date">Selecionar Prazo</string>
+    <string name="delete_card">Deletar Cartão</string>
+    <string name="alert">Alerta</string>
+    <string name="confirmation_message_to_delete_card">Tem certeza que deseja deletar o cartão \'%1$s\'?</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="str_select_label_color">Selecionar Cor da Etiqueta</string>
+    <string name="str_select_member">Selecionar Membro</string>
 </resources>
