@@ -6,9 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
-import android.webkit.MimeTypeMap
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -187,6 +185,8 @@ class MyProfileActivity : BaseActivity() {
 
     fun profileUpdateSuccess() {
         hideProgressDialog()
+        Toast.makeText(this@MyProfileActivity, "Perfil atualizado com sucesso!", Toast.LENGTH_SHORT).show()
+
         setResult(Activity.RESULT_OK)
         finish()
     }

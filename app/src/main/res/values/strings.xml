@@ -43,4 +43,5 @@
     <string name="no">Não</string>
     <string name="str_select_label_color">Selecionar Cor da Etiqueta</string>
     <string name="str_select_member">Selecionar Membro</string>
+    <string name="default_notification_channel_id">trecco_notification_channel_id</string>
 </resources>

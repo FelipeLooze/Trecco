@@ -2,6 +2,7 @@ package com.example.trecco.activities
 
 import android.app.Activity
 import android.app.AlertDialog
+import android.app.DatePickerDialog
 import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
@@ -17,6 +18,9 @@ import com.example.trecco.firebase.FirestoreClass
 import com.example.trecco.models.*
 import com.example.trecco.utils.Constants
 import kotlinx.android.synthetic.main.activity_card_details.*
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class CardDetailsActivity : BaseActivity() {
     private lateinit var mBoardDetails: Board
@@ -24,6 +28,7 @@ class CardDetailsActivity : BaseActivity() {
     private var mCardPosition: Int = -1
     private var mSelectedColor: String = ""
     private lateinit var mMembersDetailList: ArrayList<User>
+    private var mSelectedDueDateMilliSeconds: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,11 +55,22 @@ class CardDetailsActivity : BaseActivity() {
             membersListDialog()
         }
 
+        mSelectedDueDateMilliSeconds = mBoardDetails.taskList[mTaskListPosition].cards[mCardPosition].dueDate
+        if (mSelectedDueDateMilliSeconds > 0) {
+            val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
+            val selectedDate = simpleDateFormat.format(Date(mSelectedDueDateMilliSeconds))
+            tv_select_due_date.text = selectedDate
+        }
+
+        tv_select_due_date.setOnClickListener {
+            showDataPicker()
+        }
+
         btn_update_card_details.setOnClickListener {
             if(et_name_card_details.text.toString().isNotEmpty()) {
                 updateCardDetails()
             }else{
-                Toast.makeText(this@CardDetailsActivity, "Insera o nome do cartão", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@CardDetailsActivity, "Insira o nome do cartão", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -118,7 +134,8 @@ class CardDetailsActivity : BaseActivity() {
             et_name_card_details.text.toString(),
             mBoardDetails.taskList[mTaskListPosition].cards[mCardPosition].createdBy,
             mBoardDetails.taskList[mTaskListPosition].cards[mCardPosition].assignedTo,
-            mSelectedColor
+            mSelectedColor,
+            mSelectedDueDateMilliSeconds
         )
 
         val taskList: ArrayList<Task> = mBoardDetails.taskList
@@ -294,5 +311,36 @@ class CardDetailsActivity : BaseActivity() {
             tv_select_members.visibility = View.VISIBLE
             rv_selected_members_list.visibility = View.GONE
         }
+    }
+
+    private fun showDataPicker() {
+        val c = Calendar.getInstance()
+        val year =
+            c.get(Calendar.YEAR)
+        val month = c.get(Calendar.MONTH)
+        val day = c.get(Calendar.DAY_OF_MONTH)
+        val dpd = DatePickerDialog(
+            this,
+            DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
+
+                val sDayOfMonth = if (dayOfMonth < 10) "0$dayOfMonth" else "$dayOfMonth"
+                val sMonthOfYear =
+                    if ((monthOfYear + 1) < 10) "0${monthOfYear + 1}" else "${monthOfYear + 1}"
+
+                val selectedDate = "$sDayOfMonth/$sMonthOfYear/$year"
+
+                tv_select_due_date.text = selectedDate
+
+                val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
+
+                val theDate = sdf.parse(selectedDate)
+
+                mSelectedDueDateMilliSeconds = theDate!!.time
+            },
+            year,
+            month,
+            day
+        )
+        dpd.show()
     }
 }

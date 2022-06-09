@@ -27,6 +27,19 @@ object Constants{
     const val SELECT: String = "Select"
     const val UN_SELECT: String = "UnSelect"
 
+    const val TRECCO_PREFERENCES: String = "TreccoPrefs"
+    const val FCM_TOKEN:String = "fcmToken"
+    const val FCM_TOKEN_UPDATED:String = "fcmTokenUpdated"
+
+    const val FCM_BASE_URL:String = "https://fcm.googleapis.com/fcm/send"
+    const val FCM_AUTHORIZATION:String = "authorization"
+    const val FCM_KEY:String = "key"
+    const val FCM_SERVER_KEY:String = "AAAAkQDJNzI:APA91bHgFrbBlnXrqQ5D7DbRR7cBJB0kW_ykag-H7px24FTq8A3kK-Ou04bb7NWf5fRwyIbQr9OMXSOolDHfH4tjCk8BbOaReyT-JXsvemF9n_5PCzkKJVil8FuNGHaI5B2wDP54g46X"
+    const val FCM_KEY_TITLE:String = "title"
+    const val FCM_KEY_MESSAGE:String = "message"
+    const val FCM_KEY_DATA:String = "data"
+    const val FCM_KEY_TO:String = "to"
+
     const val READ_STORAGE_PERMISSION_CODE = 1
     const val PICK_IMAGE_REQUEST_CODE = 2
 
