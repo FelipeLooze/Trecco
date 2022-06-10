@@ -14,6 +14,13 @@ entre os usuários através da implementação de um chat em tempo real.
 |Luiz Felipe Looze             |190906  |CP110TIN2     |PA038TIN3|
 |Daniele dos Santos Rosa       |111706  |CP110TIN2     |PA038TIN1|
 
+# Video de Apresentação:
+## Youtube
+- Acessar o link do youtube: https://youtu.be/aW0LNru9k0E
+
+## Drive
+- Ou se preferir para visualizar em melhor qualidade: https://drive.google.com/file/d/10oUu72h2KAp68C-sy7v70TWY7G1hqLBC/view?usp=sharing
+
 # Funcionalidades
 - Sistema login automatico;
 - Sistema de update de perfil do usuario;
@@ -77,11 +84,18 @@ entre os usuários através da implementação de um chat em tempo real.
  <img src="Edit_card.png">
 </div>
 
-# Antes de Rodar
+# Instalação
+##Instalação Direta
+- Acessar o link: https://drive.google.com/drive/folders/1-y5I53LAp6354dvPe_FDtYOoNp7ExU0S?usp=sharing
+- Baixar o arquivo: app-debug.apk
+- Instalar
+- Abrir
+
+# Ou também:
+
+## Antes de Rodar
 Tenha certeza que o Android Studio esteja instalado. 
 Se não estiver pode ser baixado aqui: https://developer.android.com/studio
-
-# Running
 
 ## Android Studio
 - Habilitar perfil de desenvolvedor no Smartphone;
