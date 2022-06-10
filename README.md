@@ -85,7 +85,7 @@ entre os usuários através da implementação de um chat em tempo real.
 </div>
 
 # Instalação
-##Instalação Direta
+## Instalação Direta
 - Acessar o link: https://drive.google.com/drive/folders/1-y5I53LAp6354dvPe_FDtYOoNp7ExU0S?usp=sharing
 - Baixar o arquivo: app-debug.apk
 - Instalar
