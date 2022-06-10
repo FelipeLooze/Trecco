@@ -124,6 +124,11 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
         when (menuItem.itemId) {
+
+            R.id.nav_chat -> {
+                startActivityForResult(Intent(this@MainActivity, ChatActivity::class.java), CHAT_REQUEST_C0DE)
+            }
+
             R.id.nav_my_profile -> {
                 startActivityForResult(Intent(this@MainActivity, MyProfileActivity::class.java), MY_PROFILE_REQUEST_CODE)
             }
@@ -189,6 +194,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     companion object{
         const val MY_PROFILE_REQUEST_CODE: Int = 11
         const val CREATE_BOARD_REQUEST_CODE: Int = 12
+        const val CHAT_REQUEST_C0DE: Int = 13
     }
 
 }

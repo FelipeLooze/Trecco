@@ -11,9 +11,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trecco.R
+import com.example.trecco.adapters.MessageAdapter
+import com.example.trecco.models.Message
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_chat.*
+import kotlinx.android.synthetic.main.activity_my_profile.*
+import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class ChatActivity : AppCompatActivity() {
 
@@ -26,16 +31,19 @@ class ChatActivity : AppCompatActivity() {
 
     var receiverRoom: String? = null
     var senderRoom: String? = null
-    //Atividade do Chat
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
+        setupActionBar()
+
+        val intent = Intent()
         val name = intent.getStringExtra("name")
         val receiverUid = intent.getStringExtra("uid")
 
         val senderUid = FirebaseAuth.getInstance().currentUser?.uid
+
         mObRef = FirebaseDatabase.getInstance().getReference()
 
         senderRoom = receiverUid + senderUid
@@ -82,4 +90,18 @@ class ChatActivity : AppCompatActivity() {
             messageBox.setText("")
         }
     }
+
+    private fun setupActionBar(){
+        setSupportActionBar(toolbar_chat_activity)
+        val actionBar = supportActionBar
+        if(actionBar != null){
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_white_color_back_24dp)
+            actionBar.title = resources.getString(R.string.nav_chat)
+        }
+
+        toolbar_chat_activity.setNavigationOnClickListener{ onBackPressed() }
+    }
+
+
 }

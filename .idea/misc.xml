@@ -5,15 +5,17 @@
       <map>
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/drawable-anydpi/shape_dialog_rounded.xml" value="0.196" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/drawable/nav_header_main_background.xml" value="0.3545" />
+        <entry key="..\:/Faculdade/Trecco/app/src/main/res/drawable/receive_message.xml" value="0.2375" />
+        <entry key="..\:/Faculdade/Trecco/app/src/main/res/drawable/sent_message.xml" value="0.2375" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/drawable/shape_button_rounded.xml" value="0.332" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/drawable/white_border_shape_button_rouded.xml" value="0.332" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_base.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_card_details.xml" value="0.33" />
-        <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_chat.xml" value="0.18854166666666666" />
+        <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_chat.xml" value="0.25" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_create_board.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_intro.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
-        <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_members.xml" value="0.18802083333333333" />
+        <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_members.xml" value="0.33" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_my_profile.xml" value="0.23125" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_sign_in.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/activity_sign_up.xml" value="0.36666666666666664" />
@@ -32,10 +34,13 @@
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/item_task.xml" value="0.23125" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/main_content.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/nav_header_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/receive.xml" value="0.23125" />
+        <entry key="..\:/Faculdade/Trecco/app/src/main/res/layout/sent.xml" value="0.23125" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/menu/menu_add_member.xml" value="0.18802083333333333" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/menu/menu_delete_card.xml" value="0.18802083333333333" />
         <entry key="..\:/Faculdade/Trecco/app/src/main/res/menu/menu_members.xml" value="0.18802083333333333" />
+        <entry key="..\:/Faculdade/Trecco/app/src/main/res/menu/nav_menu_chat.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

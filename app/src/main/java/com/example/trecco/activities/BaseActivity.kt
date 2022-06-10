@@ -26,13 +26,10 @@ open class BaseActivity : AppCompatActivity() {
     fun showProgressDialog(text: String) {
         mProgressDialog = Dialog(this)
 
-        /*Set the screen content from a layout resource.
-        The resource will be inflated, adding all top-level views to the screen.*/
         mProgressDialog.setContentView(R.layout.dialog_progress)
 
         mProgressDialog.tv_progress_text.text = text
 
-        //Start the dialog and display it on screen.
         mProgressDialog.show()
     }
 
