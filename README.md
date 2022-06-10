@@ -22,6 +22,11 @@ entre os usuários através da implementação de um chat em tempo real.
 
 # Telas
 
+## Tela Splash
+  <div align="center">
+   <img src="Splash.png">
+  </div>
+
 ## Tela Inicial
   <div align="center">
    <img src="Tela_inicial.jpeg">
@@ -37,15 +42,40 @@ entre os usuários através da implementação de um chat em tempo real.
    <img src="Tela_login.jpeg">
   </div>
   
-## Tela Meu Perfil
+## Tela Principal
   <div align="center">
-   <img src="Meu_perfil.jpeg">
+   <img src="Boards.png">
   </div>
   
 ## Tela Barra de Navegação
   <div align="center">
-   <img src="Nav_bar.jpeg">
+   <img src="barra_atualizada.png">
   </div>
+  
+## Tela de Chat
+<div align="center">
+ <img src="Chat.png">
+</div>  
+  
+## Tela Meu Perfil
+  <div align="center">
+   <img src="Meu_perfil.jpeg">
+  </div>  
+  
+## Tela de Tarefas
+<div align="center">
+ <img src="Cards.png">
+</div>
+
+## Tela de Membros
+<div align="center">
+ <img src="members_list.png">
+</div>
+
+## Tela de Cards
+<div align="center">
+ <img src="Edit_card.png">
+</div>
 
 # Antes de Rodar
 Tenha certeza que o Android Studio esteja instalado. 
